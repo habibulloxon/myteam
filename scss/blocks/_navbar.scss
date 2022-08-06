@@ -1,0 +1,35 @@
+.header__navbar{
+    margin-left: 80px;
+}
+.header__list{
+    display: flex;
+    align-items: center;
+    @include list-style;
+}
+.header__item{
+    margin-right: 40px;
+    &:last-child{
+        margin-right: 0;
+    }
+}
+.header__link{
+    text-decoration: none;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1.125rem;
+    line-height: 28px;
+    color: $white;
+    &:active{
+        color: $light-coral;
+    }
+}
+@media only screen and (max-width: $tablet){
+    .header__navbar{
+        margin-left: 48px;
+    }
+}
+@media only screen and (max-width: $mobile){
+    .header__navbar{
+        display: none;
+    }
+}
