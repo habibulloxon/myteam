@@ -1,0 +1,129 @@
+.footer{
+    background-color: $dark-green;
+    p{
+        margin: 0;
+    }
+}
+.footer__container{
+    display: flex;
+    padding: 48px 0px;
+}
+.footer__navlist{
+    margin-top: 25px;
+    display: flex;
+    @include list-style;
+}
+.footer__wrapper{
+    display: flex;
+}
+.footer__navitem{
+    margin-right: 40px;
+    &:last-child{
+        margin-right: 0;
+    }
+}
+.footer__item-link{
+    text-decoration: none;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1.125rem;
+    line-height: 28px;
+    color: $white;
+    &:active{
+        color: $light-coral;
+    }
+}
+.footer__links{
+    margin-right: 125px;
+}
+.footer-address-wrapper{
+    @include list-style;
+}
+.footer__address{
+    font-style: normal;
+    font-weight: 600;
+    font-size: 0.938rem;
+    line-height: 25px;
+    opacity: 0.6;
+    color: $white;
+}
+.footer__socials{
+    @include list-style;
+    display: flex;
+}
+.footer__content{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-left: 400px;
+}
+.footer__socials{
+    margin-bottom: 54px;
+}
+.fa-brands{
+    font-size: 1.5rem;
+    color: $white;
+    &:active{
+        color: $light-coral;
+    }
+}
+.footer__socials-item{
+    margin-right: 16px;
+    &:last-child{
+        margin-right: 0;
+    }
+}
+.copyright{
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 25px;
+    color: $white;
+    opacity: 0.6;
+}
+@media only screen and (max-width: $tablet){
+    .footer__container{
+        display: flex;
+        flex-direction: column;
+        padding: 56px 0px;
+    }
+    .footer__wrapper{
+        justify-content: space-between;
+    }
+    .footer__navbar{
+        margin-top: 53px;
+    }
+    .footer__content{
+        margin-top: 33px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: row;
+        margin-left: 0;
+    }
+    .footer__socials{
+        margin-bottom: 0;
+    }
+}
+@media only screen and (max-width: $mobile){
+    .footer__container,
+    .footer__wrapper,
+    .footer__content{
+        text-align: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .footer__navbar{
+        margin-top: 24px;
+    }
+    .footer__links{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-right: 0;
+        margin-bottom: 24px;
+    }
+    .footer__socials{
+        margin-bottom: 16px;
+    }
+}

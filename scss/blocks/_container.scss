@@ -1,18 +1,18 @@
 .container{
     width: 1140px;
-    border: 1px solid;
+    border: 1px solid transparent;
     margin: 0 auto;
     padding: 0 15px;
 }
 @media only screen and (max-width: $tablet){
     .container{
         width: 683px;
-        border: 1px solid red;
+        border: 1px solid transparent;
     }
 }
 @media only screen and (max-width: $mobile){
     .container{
         width: 327px;
-        border: 1px solid red;
+        border: 1px solid transparent;
     }
 }

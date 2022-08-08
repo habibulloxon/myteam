@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Livvic:ital,wght@0,400;0,600;0,700;1,500;1,700&display=swap');
 html{
-    // scroll-behavior: smooth;
+    scroll-behavior: smooth;
+    user-select: none;
 }
 *{
     box-sizing: border-box;
