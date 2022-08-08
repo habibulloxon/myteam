@@ -1,5 +1,7 @@
 .header{
+    overflow-x: hidden;
     background-color: $midnight-green;
+    position: relative;
 }
 .header__container{
     position: relative;
@@ -7,9 +9,61 @@
     align-items: center;
     padding-top: 77px;
 }
+// MOBILE__MENU
+.header__menu-wrapper{
+    display: none;
+    display: flex;
+    padding-top: 115px;
+    padding-left: 48px;
+    width: 70%;
+    height: 100vh;
+    background-color: $police-blue;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 99;
+    transition: 0.5s;
+    transform: translateX(100%);
+    -webkit-box-shadow: -100px 0px 20px -1px rgba(34, 60, 80, 0.1);
+    -moz-box-shadow: -100px 0px 20px -1px rgba(34, 60, 80, 0.1);
+    box-shadow: -100px 0px 200px -1px rgba(34, 60, 80, 0.1);
+}
+.mobile__bg{
+    bottom: 0;
+    right: 0;
+    position: absolute;
+}
+.mobile__list{
+    @include list-style;
+}
+.mobile__item{
+    &:nth-child(1){
+        margin-bottom: 25px;
+    }
+    &:nth-child(2){
+        margin-bottom: 40px;
+    }
+}
 .header__cta{
     right: 0;
     position: absolute;
+    padding: 9px 33px;
+    border: 2px solid #FFFFFF;
+    border-radius: 24px;
+    text-decoration: none;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1.125rem;
+    line-height: 28px;
+    color: $white;
+    &:active{
+        color: $dark-green;
+        background: #FFFFFF;
+        border: 2px solid #FFFFFF;
+        border-radius: 24px;
+    }
+}
+.mobile__cta{
     padding: 9px 33px;
     border: 2px solid #FFFFFF;
     border-radius: 24px;
@@ -35,6 +89,7 @@
     height: 17px;
     background-color: transparent;
     border: none;
+    z-index: 999;
 }
 .header__menu-inner{
     display: block;
@@ -66,16 +121,25 @@
         border-radius: 5px;
     }
 }
+.header__menu:hover ~ .header__menu-wrapper{
+    transform: translateX(0%);
+}
 @media only screen and (max-width: $tablet){
 
 }
 @media only screen and (max-width: $mobile){
+    .header__container{
+        padding-top: 48px;
+    }
     .header__cta{
         display: none;
     }
     .header__menu{
         position: absolute;
         right: 0;
+        display: block;
+    }
+    .header__menu-wrapper{
         display: block;
     }
 }

@@ -1,0 +1,103 @@
+.hero{
+    border: 1px solid transparent;
+}
+.hero__container{
+    margin-top: 130px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 255px;
+    position: relative;
+}
+.hero__bg-1{
+    right: 0;
+    bottom: 0;
+    position: absolute;
+}
+.hero__bg-2{
+    margin-top: 130px;
+    position: absolute;
+}
+.hero__title{
+    font-style: normal;
+    font-weight: 700;
+    font-size: 6.25rem;
+    line-height: 100px;
+    color: $white;
+    .hero__title-inner{
+        color: $light-coral;
+    }
+}
+.hero__text{
+    width: 445px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1.125rem;
+    line-height: 28px;
+    color: $white;
+    &::before{
+        margin-bottom: 79px;
+        display: block;
+        content: "";
+        width: 50px;
+        height: 4px;
+        background-color: $rapture-blue;
+    }
+}
+@media only screen and (max-width: $tablet){
+    .hero__bg-2{
+        display: none;
+    }
+    .hero__container{
+        text-align: center;
+        flex-direction: column;
+        margin-top: 112px;
+    }
+    .hero__title{
+        font-style: normal;
+        font-weight: 700;
+        font-size: 4rem;
+        line-height: 56px;
+    }
+    .hero__text{
+        font-style: normal;
+        font-weight: 600;
+        font-size: 0.938rem;
+        line-height: 28px;
+        width: 457px;
+        margin-top: 24px;
+        &::before{
+            display: none;
+        }
+    }
+}
+@media only screen and (max-width: $mobile){
+    .hero__bg-2{
+        display: none;
+    }
+    .hero__container{
+        text-align: center;
+        flex-direction: column;
+        margin-top: 80px;
+    }
+    .hero__title{
+        font-style: normal;
+        font-weight: 700;
+        font-size: 2.5rem;
+        line-height: 40px;
+    }
+    .hero__text{
+        font-style: normal;
+        font-weight: 600;
+        font-size: 0.938rem;
+        line-height: 28px;
+        width: 327px;
+        margin-top: 18px;
+        &::before{
+            display: none;
+        }
+    }
+    .hero__bg-1{
+        width: 327px;
+    }
+}

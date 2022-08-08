@@ -7,12 +7,12 @@
 @media only screen and (max-width: $tablet){
     .container{
         width: 683px;
-        border: 1px solid transparent;
+        border: 1px solid red;
     }
 }
 @media only screen and (max-width: $mobile){
     .container{
         width: 327px;
-        border: 1px solid transparent;
+        border: 1px solid red;
     }
 }
